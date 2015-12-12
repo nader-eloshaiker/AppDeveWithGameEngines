@@ -2,50 +2,6 @@
 
 <!--
 
-    Welcome to the light side of the source, young padawan.
-
-    One step closer to learn something interesting you are...
-
-                               ____
-                            _.' :  `._
-                        .-.'`.  ;   .'`.-.
-               __      / : ___\ ;  /___ ; \      __
-             ,'_ ""=-.:__;".-.";: :".-.":__;.-="" _`,
-             :' `.t""=-.. '<@.`;_  ',@:` ..-=""j.' `;
-                  `:-.._J '-.-'L__ `-.-' L_..-;'
-                    "-.__ ;  .-"  "-.  : __.-"
-                        L ' /.======.\ ' J
-                         "-.   "__"   .-"
-                        __.l"-:_JL_;-";.__
-                     .-j/'.;  ;""""  / .'\"-.
-                   .' /:`. "-.:     .-" .';  `.
-                .-"  / ;  "-. "-..-" .-"  :    "-.
-             .+"-.  : :      "-.__.-"      ;-._   \
-             ; \  `.; ;                    : : "+. ;
-             :  ;   ; ;                    : ;  : \:
-             ;  :   ; :                    ;:   ;  :
-            : \  ;  :  ;                  : ;  /  ::
-            ;  ; :   ; :                  ;   :   ;:
-            :  :  ;  :  ;                : :  ;  : ;
-            ;\    :   ; :                ; ;     ; ;
-            : `."-;   :  ;              :  ;    /  ;
-             ;    -:   ; :              ;  : .-"   :
-             :\     \  :  ;            : \.-"      :
-              ;`.    \  ; :            ;.'_..-=  / ;
-              :  "-.  "-:  ;          :/."      .'  :
-               \         \ :          ;/  __        :
-                \       .-`.\        /t-""  ":-+.   :
-                 `.  .-"    `l    __/ /`. :  ; ; \  ;
-                   \   .-" .-"-.-"  .' .'j \  /   ;/
-                    \ / .-"   /.     .'.' ;_:'    ;
-                     :-""-.`./-.'     /    `.___.'
-                           \ `t  ._  /
-                            "-.t-._:'
-
--->
-
-<!--
-
     So you'd like to know how to use impress.js?
 
     You've made the first, very important step - you're reading the source code.
@@ -191,7 +147,7 @@
     <div id="introduction" class="step slide" data-x="0" data-y="-1800">
         <slidetitle>Introduction</slidetitle>
         <br/>
-        <li>Who is “Darth” Nader, a sith lord?</li>
+        <li>Who is Nader, a sith lord?</li>
         <br/>
         <li>What is a Game Engine.</li>
         <li>Compare application of Game Engine and a UI API.</li>
@@ -257,7 +213,7 @@
     <div id="demoDesc" class="step" data-x="4000" data-y="3500" data-rotate="180" data-scale="6">
     	<slidetitle>Demo View Nodes / TTF Labels<sup>*</sup></slidetitle>
     	<br>
-        <li>Animating the <b class="positioning">position</b>, <b class="rotating">rotation</b> and 
+        <li>Animating the <b class="positioning">position</b>, <b class="rotating">rotation</b> and
 		<b class="scaling">scale</b></li>
 		<li>Tinting of <b class="colour">Colour</b> and alpha</li>
 		<li>Animation timing and call back</li>
@@ -301,52 +257,53 @@
     <div id="uilabel" class="step" data-x="4000" data-y="-1200" data-rotate="270" data-scale="6">
     	<slidetitle>UI API Code</slidetitle>
     	<br />
-        <p><span>UILabel.*label = [[</span><span>UILabel.alloc</span><span>] </span><span>initWithFrame</span><span>:[self </span><span>getRandomFrame:scrnSize</span><span>size:labelSize</span><span>]];&nbsp; </span></p>
-<p><span>label.textColor</span><span>= [self </span><span>getRandomColor</span><span>];&nbsp; </span></p>
-<p><span>label.numberOfLines</span><span>= 1;&nbsp; </span></p>
-<p><span>label.text</span><span>= [</span><span>NSString</span><span>stringWithFormat</span><span>:@"</span><span>Odecee</span><span>:%0.2f", [self </span><span>getRandomRotation</span><span>]];&nbsp; </span></p>
-<p><span>label.font</span><span>= [</span><span>UIFont</span><span>fontWithName</span><span>:@"</span><span>ArialMT</span><span>" size:16.0];&nbsp; </span></p>
-<p><span>[</span><span>view </span><span>addSubview:label</span><span>];&nbsp; </span></p>
+        <p><span>UILabel.*label = [[UILabel.alloc] initWithFrame:[self getRandomFrame:scrnSizesize:labelSize]];&nbsp; </span></p>
+<p><span>label.textColor= [self getRandomColor];&nbsp; </span></p>
+<p><span>label.numberOfLines= 1;&nbsp; </span></p>
+<p><span>label.text= [NSStringstringWithFormat:@"Odecee:%0.2f", [self getRandomRotation]];&nbsp; </span></p>
+<p><span>label.font= [UIFontfontWithName:@"ArialMT" size:16.0];&nbsp; </span></p>
+<p><span>[view addSubview:label];&nbsp; </span></p>
 <p><span>&nbsp; </span></p>
-<p><span>[</span><span>UILabel.animateWithDuration</span><span>:</span><span>10.0</span><span>&nbsp; </span></p>
-<p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; delay:5</span><span>&nbsp; </span></p>
-<p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span>options</span><span>: </span><span>UIViewAnimationCurveEaseOut</span><span> + </span><span>UIViewAnimationOptionBeginFromCurrentState</span><span>&nbsp; </span></p>
-<p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span>animations</span><span>:^{&nbsp; </span></p>
-<p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span>CGAffineTransform</span><span>transform</span><span> = </span><span>CGAffineTransformIdentity</span><span>;&nbsp; </span></p>
-<p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span>transform</span><span> = </span><span>CGAffineTransformScale</span><span>(</span><span>transform</span><span>, [</span><span>self getRandomScale</span><span>], [</span><span>self getRandomScale</span><span>]);&nbsp; </span></p>
-<p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span>transform</span><span> = </span><span>CGAffineTransformRotate</span><span>(</span><span>transform</span><span>, [</span><span>self getRandomRotationRad</span><span>]);&nbsp; </span></p>
-<p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span>label.frame</span><span> = [</span><span>self getRandomFrame:scrnSize</span><span>size:labelSize</span><span>];&nbsp; </span></p>
-<p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span>label.transform</span><span> = transform;&nbsp; </span></p>
-<p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span>}&nbsp; </span></p>
-<p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span>completion</span><span>:^(BOOL </span><span>finished</span><span>){&nbsp; </span></p>
-<p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span>[label </span><span>removeFromSuperview</span><span>];&nbsp; </span></p>
-<p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span>}];&nbsp;&nbsp;</span></p>
+<p><span>[UILabel.animateWithDuration:10.0&nbsp; </span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; delay:5&nbsp; </span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; options: UIViewAnimationCurveEaseOut + UIViewAnimationOptionBeginFromCurrentState&nbsp; </span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; animations:^{&nbsp; </span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CGAffineTransformtransform = CGAffineTransformIdentity;&nbsp; </span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; transform = CGAffineTransformScale(transform, [self getRandomScale], [self getRandomScale]);&nbsp; </span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; transform = CGAffineTransformRotate(transform, [self getRandomRotationRad]);&nbsp; </span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; label.frame = [self getRandomFrame:scrnSizesize:labelSize];&nbsp; </span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; label.transform = transform;&nbsp; </span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }&nbsp; </span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; completion:^(BOOL finished){&nbsp; </span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [label removeFromSuperview];&nbsp; </span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }];&nbsp;&nbsp;</span></p>
     </div>
 
     <div id="cclabelTTF" class="step" data-x="9000" data-y="-500" data-scale="6">
     	<slidetitle>Game Engine Code</slidetitle>
     	<br />
-<p>NSString*str = [NSStringstringWithFormat:@"Odecee:%0.2f", [self getRandomRotation]];&nbsp;</p>
-<p>CCLabelTTF*label = [CCLabelTTFlabelWithString:strfontName:@"ArialMT" fontSize:16];&nbsp;</p>
-<p>label.color= [CCColorcolorWithUIColor:[self getRandomColor]];&nbsp;</p>
-<p>label.position= [self getRandomPoint:scrnSize];&nbsp;</p>
-<p>label.visible= false;&nbsp;</p>
-<p>[self addChild:label];&nbsp;</p>
-<p>&nbsp;</p>
-<p>id&nbsp;rotate1 = [CCActionRotateTo&nbsp;actionWithDuration:10.0angle:[selfgetRandomRotation]];&nbsp;</p>
-<p>id&nbsp;scale1 = [CCActionScaleTo&nbsp;actionWithDuration:10.0scale:[selfgetRandomScale]];&nbsp;</p>
-<p>id&nbsp;tint1 = [CCActionTintTo&nbsp;actionWithDuration:10.0color:[CCColorcolorWithUIColor:[selfgetRandomColor]]];&nbsp;</p>
-<p>id&nbsp;position1 = [CCActionMoveTo&nbsp;actionWithDuration:10.0position:[selfgetRandomPoint:scrnSize]];&nbsp;</p>
-<p>id&nbsp;action1 = [CCActionSpawn actions:rotate1, scale1, tint1, position1, nil];&nbsp;</p>
-<p>action1 = [CCActionEaseBounceOut actionWithAction:action1];&nbsp;</p>
-<p>&nbsp;</p>
-<p>id&nbsp;show = [CCActionShowaction];&nbsp;</p>
-<p>id&nbsp;remove = [CCActionRemoveaction];&nbsp;</p>
-<p>&nbsp;</p>
-<p>id&nbsp;delayStart = [CCActionDelayactionWithDuration:5.0];</p>
-<p>id&nbsp;delayPause = [CCActionDelayactionWithDuration:2.0];&nbsp;</p>
-<p>&nbsp;</p>
-<p>[label&nbsp;runAction:[CCActionSequenceactions:show, delayStart, action1, delayPause, remove, nil]]; &nbsp;</p>    </div>
+<p>NSString*str = [NSStringstringWithFormat:@"Odecee:%0.2f", [self getRandomRotation]];</p>
+<p>CCLabelTTF*label = [CCLabelTTFlabelWithString:strfontName:@"ArialMT" fontSize:16];</p>
+<p>label.color= [CCColorcolorWithUIColor:[self getRandomColor]];</p>
+<p>label.position= [self getRandomPoint:scrnSize];</p>
+<p>label.visible= false;</p>
+<p>[self addChild:label];</p>
+<p></p>
+<p>id rotate1 = [CCActionRotateTo actionWithDuration:10.0angle:[self getRandomRotation]];</p>
+<p>id scale1 = [CCActionScaleTo actionWithDuration:10.0scale:[self getRandomScale]];</p>
+<p>id tint1 = [CCActionTintTo actionWithDuration:10.0color:[CCColorcolorWithUIColor:[self getRandomColor]]];</p>
+<p>id position1 = [CCActionMoveTo actionWithDuration:10.0 position:[self getRandomPoint:scrnSize]];</p>
+<p>id action1 = [CCActionSpawn actions:rotate1, scale1, tint1, position1, nil];</p>
+<p>action1 = [CCActionEaseBounceOut actionWithAction:action1];</p>
+<p></p>
+<p>id show = [CCActionShow action];</p>
+<p>id remove = [CCActionRemove action];</p>
+<p></p>
+<p>id delayStart = [CCActionDelay actionWithDuration:5.0];</p>
+<p>id delayPause = [CCActionDelay actionWithDuration:2.0];</p>
+<p></p>
+<p>[label runAction:[CCActionSequence actions:show, delayStart, action1, delayPause, remove, nil]];</p>
+</div>
 
 
 
