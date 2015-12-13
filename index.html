@@ -288,20 +288,20 @@
 <p>label.position= [self getRandomPoint:scrnSize];</p>
 <p>label.visible= false;</p>
 <p>[self addChild:label];</p>
-<p></p>
+<p>&nbsp;</p>
 <p>id rotate1 = [CCActionRotateTo actionWithDuration:10.0angle:[self getRandomRotation]];</p>
 <p>id scale1 = [CCActionScaleTo actionWithDuration:10.0scale:[self getRandomScale]];</p>
 <p>id tint1 = [CCActionTintTo actionWithDuration:10.0color:[CCColorcolorWithUIColor:[self getRandomColor]]];</p>
 <p>id position1 = [CCActionMoveTo actionWithDuration:10.0 position:[self getRandomPoint:scrnSize]];</p>
 <p>id action1 = [CCActionSpawn actions:rotate1, scale1, tint1, position1, nil];</p>
 <p>action1 = [CCActionEaseBounceOut actionWithAction:action1];</p>
-<p></p>
+<p>&nbsp;</p>
 <p>id show = [CCActionShow action];</p>
 <p>id remove = [CCActionRemove action];</p>
 <p></p>
 <p>id delayStart = [CCActionDelay actionWithDuration:5.0];</p>
 <p>id delayPause = [CCActionDelay actionWithDuration:2.0];</p>
-<p></p>
+<p>&nbsp;</p>
 <p>[label runAction:[CCActionSequence actions:show, delayStart, action1, delayPause, remove, nil]];</p>
 </div>
 
